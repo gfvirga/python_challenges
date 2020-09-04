@@ -16,9 +16,9 @@ def get_num_stickers(word):
     # Buys the first sticker
     buy_sticker()
 
-    # Loops throw the word for each letter
+    # Loops through the word for each letter
     for letter in word.replace(" ", ""):
-        # If finds the letter in facebook
+        # If finds the letter in current sticker dictionary
         if letter in sticker:
             # Take a letter away
             sticker[letter] -= 1
