@@ -22,7 +22,7 @@ def get_num_stickers(word):
         if letter in sticker:
             # Take a letter away
             sticker[letter] -= 1
-            # If the leeter is 0, adds to the sticker counter and buys another sticker adding to the dictionary hash
+            # If the letter amount available is 0 - add to the total sticker counter and buys another sticker adding to the new letter to the dictionary hash
             if sticker[letter] == 0:
                 total_full_stickers += 1
                 buy_sticker()
