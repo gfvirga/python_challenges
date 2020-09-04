@@ -1,3 +1,5 @@
+# Example solution for an interview question
+
 def get_num_stickers(word):
     sticker = {}
     total_full_stickers = 0
@@ -31,9 +33,8 @@ def get_num_stickers(word):
 
     return total_full_stickers
 
-
-# Enter word
-# Prints stickers
+# word in question
+# prints the result of get_num_stickers function
 word = "coffee kebab"
 print "For the word '" + word + "' need to buy " + str(get_num_stickers(word)) + " stickers!"
 
