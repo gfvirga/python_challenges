@@ -1,20 +1,11 @@
 # Example solution for an interview question
 
 def get_num_stickers(word):
-    sticker = {}
+    sticker ={}
     total_full_stickers = 0
-    
-    # Buy a sticker
-    def buy_sticker():
-        # Cutting the facebook word into letters and putting a dictionary
-        for cut in "facebook":
-            if cut in sticker:
-                sticker[cut] += 1
-            else:
-                sticker[cut] = 1
 
-    # Buys the first sticker
-    buy_sticker()
+    # Buys first sticker
+    sticker = buy_sticker("facebook",sticker)
 
     # Loops through the word for each letter
     for letter in word.replace(" ", ""):
@@ -25,13 +16,24 @@ def get_num_stickers(word):
             # If the letter amount available is 0 - add to the total sticker counter and buys another sticker adding to the new letter to the dictionary hash
             if sticker[letter] == 0:
                 total_full_stickers += 1
-                buy_sticker()
+                sticker = buy_sticker("facebook",sticker)
         # If not it will break
         else:
             print "Letter not in facebook"
             break
 
     return total_full_stickers
+
+
+def buy_sticker(word, sticker):
+    # Cutting the facebook word into letters and putting a dictionary
+    for cut in word:
+        if cut in sticker:
+            sticker[cut] += 1
+        else:
+            sticker[cut] = 1
+    return sticker
+
 
 # word in question
 # prints the result of get_num_stickers function
@@ -55,3 +57,12 @@ print "For the word '" + word + "' need to buy " + str(get_num_stickers(word)) +
 
 word = "what"
 print "For the word '" + word + "' need to buy " + str(get_num_stickers(word)) + " stickers!"
+
+
+# Test
+from collections import Counter
+test = buy_sticker("facebook", {})
+if test == Counter("facebook"):
+    print("Tested ok")
+else:
+    print 1
