@@ -12,7 +12,6 @@ array.sort()
 #Two Sum
 while left < right:
     sum = array[right] + array[left] 
-    #print(f"{array[right]} + {array[left]} = {sum}")
     if sum == 2020:
         print(array[right] * array[left])
         break
@@ -28,7 +27,6 @@ for i in range(len(array) - 2):
     right = len(array)-1
     while left < right:
         sum = array[i] + array[right] + array[left] 
-        #print(f"{array[i]} + {array[right]} + {array[left]} = {sum}")
         if sum == 2020:
             print(array[i] * array[right] * array[left])
             break
