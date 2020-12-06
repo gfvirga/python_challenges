@@ -30,7 +30,6 @@ print(highest)
 
 # Part Two
 highest = 0
-seats = {}
 ids = []
 with open('day5input.txt') as f:
     for line in f:
