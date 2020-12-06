@@ -14,16 +14,14 @@ with open('day5input.txt') as f:
         row = [x for x in range(0,128)]
         col = [x for x in range(0,8)]
         for i,char in enumerate(line):
-            if i < 7 :
-                if char == "F":
-                    row = row[:(len(row)//2)]
-                else:
-                    row = row[(len(row)//2):]
-            else:
-                if char == "L":
-                    col = col[:(len(col)//2)]
-                else:
-                    col = col[(len(col)//2):]
+            if char == "F":
+                row = row[:(len(row)//2)]
+            elif char == "B":
+                row = row[(len(row)//2):]
+            elif char == "L":
+                col = col[:(len(col)//2)]
+            elif char == "R":
+                col = col[(len(col)//2):]
         highest = max(highest, (row[0] * 8 + col[0]))
 
 print(highest)
@@ -37,16 +35,14 @@ with open('day5input.txt') as f:
         row = [x for x in range(0,128)]
         col = [x for x in range(0,8)]
         for i,char in enumerate(line):
-            if i < 7 :
-                if char == "F":
-                    row = row[:(len(row)//2)]
-                else:
-                    row = row[(len(row)//2):]
-            else:
-                if char == "L":
-                    col = col[:(len(col)//2)]
-                else:
-                    col = col[(len(col)//2):]
+            if char == "F":
+                row = row[:(len(row)//2)]
+            elif char == "B":
+                row = row[(len(row)//2):]
+            elif char == "L":
+                col = col[:(len(col)//2)]
+            elif char == "R":
+                col = col[(len(col)//2):]
         ids.append(row[0] * 8 + col[0])
 
 # Find the open seat.     
