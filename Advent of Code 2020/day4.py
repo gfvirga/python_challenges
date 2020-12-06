@@ -51,30 +51,3 @@ for line in  file.read().split("\n\n"):
 print(valids)
 
 
-# Part Two
-import re
-import collections
-line_helper = ""
-valids = 0
-keys = ["byr","iyr","eyr","hgt","hcl","ecl","pid"]
-with open('day4input.txt') as f:
-    for line in f:
-        if line == "\n":
-            if all(key + ":" in line_helper for key in keys):
-                passport = {k:v for part in line_helper.strip().split(" ") for k,v in [part.split(":")] }
-
-                if (
-                    int(passport['byr']) >= 1920 and int(passport['byr']) <= 2002 and 
-                    int(passport['iyr']) >= 2010 and int(passport['iyr']) <= 2020 and
-                    int(passport['eyr']) >= 2020 and int(passport['eyr']) <= 2030 and
-                    re.match("^(1([5-8][0-9]|9[0-3])cm|(59|[6][0-9]|[7][0-6])in)$",passport['hgt']) and
-                    re.match("#[0-9a-f]{6}",passport['hcl']) and
-                    re.match("^(amb|blu|brn|gry|grn|hzl|oth)$", passport['ecl']) and
-                    re.match("^\d{9}$", passport['pid'])
-                    ):
-                    valids += 1
-            line_helper = ""
-
-        else:
-            line_helper += line.strip() + " "
-    print(valids)
