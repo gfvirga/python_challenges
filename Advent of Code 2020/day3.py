@@ -42,7 +42,7 @@ for position, skip in [[1,1],[3,1],[5,1],[7,1],[1,2]]:
             line = list(line.strip())
             if skip > 0:
                 skip -= 1
-                print((''.join(line)))
+                #print((''.join(line)))
                 continue
             else:
                 skip = skip_helper -1
@@ -54,9 +54,9 @@ for position, skip in [[1,1],[3,1],[5,1],[7,1],[1,2]]:
                 line[position] = "O"
                 counter += 1
             position += position_helper
-            print(''.join(line))
+            #print(''.join(line))
     result *= counter
-    print(counter)
+    #print(counter)
     counter = 0
 print(result)
 
