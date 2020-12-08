@@ -3,6 +3,7 @@
 file = open('day8input.txt',mode='r')
 line = [line.split() for line in  file.read().split("\n")]
 
+# Part One:
 accumulation = 0
 visited = set()
 i = 0
@@ -19,7 +20,7 @@ while i not in visited:
         accumulation += int(num)
 print(f"Part One: {accumulation}")
 
-switch = 0
+# Part Two:
 for switch in range(1,len(line)):
     accumulation = 0
     visited = set()
