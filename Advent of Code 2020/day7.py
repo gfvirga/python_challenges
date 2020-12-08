@@ -12,8 +12,7 @@ for line in file.read().split(".\n"):
     else:
         bags[key.strip()] = {bag: time for time, bag in (value.strip().split(" ", 1) for value in values.split(", "))}
 
-# def check(key):
-    
+# Part One:
 def check_shiny(key):
     for k in bags[key].keys():
         print(k + ".")
@@ -24,12 +23,20 @@ def check_shiny(key):
 
 for bag in bags.keys():
     print(f"            checking bag: {bag}")
-    if check_shiny(bag):
-        print(f"FOUND {bag}")
-        seen.add(bag)
-    
+    check_shiny(bag)
 
-
-print(count)
 print(len(seen))
+
+# Part Two
+def Count_shiny(key):
+    for k in bags[key].keys():
+        print(k + ".")
+        if 'shiny gold' == k:
+            seen.add(bag)
+            break
+        check_shiny(k)
+
+for bag in bags.keys():
+    print(f"            checking bag: {bag}")
+    check_shiny(bag)
 
