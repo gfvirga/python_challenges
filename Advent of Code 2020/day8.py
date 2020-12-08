@@ -1,5 +1,3 @@
-
-
 file = open('day8input.txt',mode='r')
 line = [line.split() for line in  file.read().split("\n")]
 
@@ -21,7 +19,7 @@ while i not in visited:
 print(f"Part One: {accumulation}")
 
 # Part Two:
-for switch in range(1,len(line)):
+for switch in range(len(line)):
     accumulation = 0
     visited = set()
     i = 0
@@ -35,6 +33,7 @@ for switch in range(1,len(line)):
                 instruction = 'nop'
             elif instruction == 'nop':
                 instruction = 'jmp'
+
         if instruction == 'nop': 
             i += 1
             continue
