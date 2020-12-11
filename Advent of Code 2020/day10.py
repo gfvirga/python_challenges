@@ -5,7 +5,7 @@ diff = {
     1: 0,
     3: 0
 }
-
+nums.append(0)
 nums.append(max(nums) + 3)
 
 # Part One
