@@ -33,4 +33,3 @@ for i in range(len(nums)):
         if sum(nums[i:j]) == num:
             if i == j-1 : continue
             print(f"Part Two: {min(nums[i:j]) + max(nums[i:j])}")
-          
