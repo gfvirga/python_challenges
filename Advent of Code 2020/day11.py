@@ -13,7 +13,7 @@ def visualize(matrix):
 
 # Part One
 def count_adj(x, y, max_row, max_col):
-    cockupy = 0
+    occupy = 0
     for direction in directions:
         dx, dy = direction
         sum_x = sum([x,dx])
@@ -23,8 +23,8 @@ def count_adj(x, y, max_row, max_col):
         if sum_x > max_row or sum_y > max_col:
             continue
         if seats[sum_x][sum_y] == "#":
-            cockupy += 1
-    return cockupy
+            occupy += 1
+    return occupy
 
 # Everyone taking seats
 while True:
