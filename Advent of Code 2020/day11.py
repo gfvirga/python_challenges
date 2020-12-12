@@ -4,8 +4,11 @@ seats = [list(line) for line in file.read().split("\n")]
 directions = [[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[-1,-1]]
 
 def visualize(matrix):
+    occupied_total = 0
     for row in range(len(matrix)):
         print(''.join(matrix[row]))
+        occupied_total += matrix[row].count('#')
+    print(f"Part One: {occupied_total}")
 
 def count_adj(x, y, max_row, max_col):
     cockupy = 0
@@ -28,9 +31,9 @@ def count_adj(x, y, max_row, max_col):
     return cockupy
 
 # Everyone came in to seat
-for _ in range(2):
+while True:
     seats_helper = copy.deepcopy(seats)
-    visualize(seats)
+    # visualize(seats)
     for row in range(len(seats)):
         for col in range(len(seats[0])):
             if seats[row][col] == ".": continue
@@ -40,11 +43,13 @@ for _ in range(2):
                 seats_helper[row][col] = "L"
             if count == 0 and seats[row][col] == "L":
                 seats_helper[row][col] = "#"
-    visualize(seats)
-    print("yo")
-    visualize(seats_helper)
-    print('--end-')
-    
+    # visualize(seats)
+    # print("yo")
+    # visualize(seats_helper)
+    # print('--end-')
+    if seats_helper == seats:
+        visualize(seats)
+        break
     seats = copy.deepcopy(seats_helper)
 
 
