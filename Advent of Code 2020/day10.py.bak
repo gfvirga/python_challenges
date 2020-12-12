@@ -1,0 +1,51 @@
+file = open('day10input.txt',mode='r')
+nums = [int(line) for line in file.read().split("\n")]
+
+diff = {
+    1: 0,
+    3: 0
+}
+nums.append(0)
+nums.append(max(nums) + 3)
+
+# Part One
+i = 1
+jolts_helper = 0
+while i <= max(nums):
+    jolts_helper += 1
+    if i in nums:
+        diff[jolts_helper] += 1
+        jolts_helper = 0
+    i += 1
+
+print(f"Part One: {diff[1] * diff[3]}")
+
+
+# Part Two
+# ¯\_(ツ)_/¯
+
+# Intersting Solutions
+# https://github.com/AidanGlickman/Advent-2020/blob/master/day10/solution.py
+nums.sort()
+paths = [1] + [0] * (len(nums) - 1)
+print(paths)
+for i, adapter in enumerate(nums):
+    for j in range(i - 3, i):
+        if(adapter - nums[j] <= 3):
+            print(f"{paths[i]} += {paths[j]}")
+            paths[i] += paths[j]
+print(paths)
+print(paths[-1])
+
+# kaur_virunurm
+# https://www.reddit.com/r/adventofcode/comments/ka8z8x/2020_day_10_solutions/gfbo61q?utm_source=share&utm_medium=web2x&context=3
+from collections import Counter
+c = Counter({0:1})  
+for x in nums:  
+    c[x+1] += c[x]  
+    c[x+2] += c[x]  
+    c[x+3] += c[x] 
+    print(c)
+
+print(c)
+print("Part 2:", c[max(nums) + 3])
