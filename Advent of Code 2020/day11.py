@@ -49,7 +49,7 @@ while True:
 file = open('day11input.txt',mode='r')
 seats = [list(line) for line in file.read().split("\n")]
 
-# Everyone taking seats
+# Everyone taking seat
 while True:
     seats_helper = copy.deepcopy(seats)
     # visualize(seats)
