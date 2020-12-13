@@ -16,13 +16,19 @@ for bus in buses.keys():
 next_bus = min(closest_times.items(), key=operator.itemgetter(1))[0]
 print(f"Part One: {(closest_times[next_bus] - timestamp) * next_bus}" )
 
-t = 0
-next_time = {bus:0 for bus in buses.keys()}
+# Part Two it will take days to display result.
+t = 10000000000000
+
+# Math hack to find the next bus after 10000000000000 timestamp
+next_time = {bus: t + (bus - ( t % bus))  for bus in buses.keys()}
+print(next_time)
 while True:
     for bus in buses.keys():
         if t == next_time[bus]:
             next_time[bus] += bus
+
     t = min(next_time.values())
+
     if all(next_time[bus] == t + buses[bus] for bus in buses.keys() ):
         print(f"Part Two: {t}")
         break
