@@ -17,8 +17,7 @@ next_bus = min(closest_times.items(), key=operator.itemgetter(1))[0]
 print(f"Part One: {(closest_times[next_bus] - timestamp) * next_bus}" )
 
 # Part Two it will take days to display result.
-t = 10000000000000
-
+t = 100000000000000
 # Math hack to find the next bus after 10000000000000 timestamp
 next_time = {bus: t + (bus - ( t % bus))  for bus in buses.keys()}
 print(next_time)
