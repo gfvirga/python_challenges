@@ -9,14 +9,13 @@ def speak(limit):
     turn += 2
 
     while turn < limit:
-        if spoke in spoken.keys():
-
+        if spoke in spoken:
             if len(spoken[spoke]) > 1:
                 spoke = spoken[spoke][-2:][1] - spoken[spoke][-2:][0]    
             else:
                 spoke = 0
 
-            if spoke in spoken.keys():
+            if spoke in spoken:
                 spoken[spoke].append(turn)
             else:
                 spoken[spoke] = [turn]
