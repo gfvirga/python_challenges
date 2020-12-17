@@ -53,7 +53,7 @@ for field, ranges in fields.items():
 #  {'seat': [2], 'class': [1, 2], 'row': [0, 1, 2]}
 field_idx = {k: v for k, v in sorted(field_idx.items(), key=lambda item: len(item[1]))}
 
-# Cleanup dict and make user that used field isn't reused
+# Cleanup dict and make sure that used field isn't reused
 # {'seat': 2, 'class': 1, 'row': 0}
 used = set()
 for field, idxs in field_idx.items():
