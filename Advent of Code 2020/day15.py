@@ -1,6 +1,6 @@
 
 def speak(limit):
-    file = open('day15input.txt',mode='r')
+    file = open('./inputs/day15input.txt',mode='r')
     nums = [int(x) for x in file.read().split(",")]
     spoken = {}
     for turn, spoke in enumerate(nums):

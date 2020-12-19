@@ -2,7 +2,7 @@ import re
 bags = {}
 seen = set()
 count = 0
-file = open('day7input.txt',mode='r')
+file = open('./inputs/day7input.txt',mode='r')
 for line in file.read().split(".\n"):
     line = re.sub("(bags|bag)","",line)
     line = line.replace(".","")

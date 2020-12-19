@@ -1,5 +1,5 @@
 
-file = open('day9input.txt',mode='r')
+file = open('./inputs/day9input.txt',mode='r')
 nums = [int(line) for line in file.read().split("\n")]
 
 #Two Sum

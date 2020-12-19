@@ -1,5 +1,5 @@
 import copy
-file = open('day11input.txt',mode='r')
+file = open('./inputs/day11input.txt',mode='r')
 seats = [list(line) for line in file.read().split("\n")]
 directions = [[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1]]
 
@@ -46,7 +46,7 @@ while True:
 
 # Part Two NOT SOLVED YET
 
-file = open('day11input.txt',mode='r')
+file = open('./inputs/day11input.txt',mode='r')
 seats = [list(line) for line in file.read().split("\n")]
 seat_capacity = len(seats) * len(seats[0])
 

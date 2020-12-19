@@ -9,7 +9,7 @@
 
 # Part one
 highest = 0
-with open('day5input.txt') as f:
+with open('./inputs/day5input.txt') as f:
     for line in f:
         row = [x for x in range(0,128)]
         col = [x for x in range(0,8)]
@@ -29,7 +29,7 @@ print(highest)
 # Part Two
 highest = 0
 ids = []
-with open('day5input.txt') as f:
+with open('./inputs/day5input.txt') as f:
     for line in f:
         row = [x for x in range(0,128)]
         col = [x for x in range(0,8)]

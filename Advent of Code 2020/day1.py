@@ -1,6 +1,6 @@
 array = []
 
-with open('day1input.txt') as f:
+with open('./inputs/day1input.txt') as f:
     for line in f:
         array.append(int(line))
 

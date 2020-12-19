@@ -1,6 +1,6 @@
 # Part one
 questions_count = 0
-file = open('day6input.txt',mode='r')
+file = open('./inputs/day6input.txt',mode='r')
 for line in  file.read().split("\n\n"):
     line = line.replace("\n", "")
     questions_count += len(set(line))
@@ -11,7 +11,7 @@ print(f"Questions Count: {questions_count}\n")
 
 # Part Two
 questions_count = 0
-file = open('day6input.txt',mode='r')
+file = open('./inputs/day6input.txt',mode='r')
 for line in  file.read().split("\n\n"):
     line = line.split("\n")
     line.sort()
@@ -24,7 +24,7 @@ print(f"Questions Count: {questions_count}\n")
 
 # Part Two using set()
 questions_count = 0
-file = open('day6input.txt',mode='r')
+file = open('./inputs/day6input.txt',mode='r')
 for line in  file.read().split("\n\n"):
     line = line.split("\n")
     for char in set(s for x in line for s in x):

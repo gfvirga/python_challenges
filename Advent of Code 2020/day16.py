@@ -1,4 +1,4 @@
-file = open('day16input.txt',mode='r')
+file = open('./inputs/day16input.txt',mode='r')
 block =  file.read().split("\n\n")
 
 # Parsing stuffs

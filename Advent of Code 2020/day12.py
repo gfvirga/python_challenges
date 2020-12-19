@@ -9,7 +9,7 @@ coordinates = {
 opposite = {'N':'S','S':'N','E':'W','W':'E','R': 1 ,'L': -1,90:1,180:2,270:3,360:4}
 
 #Part One:
-file = open('day12input.txt',mode='r')
+file = open('./inputs/day12input.txt',mode='r')
 for line in file.read().split("\n"):
     action, value = [line[:1],int(line[1:])]
 
@@ -45,10 +45,9 @@ coordinates = {
 }
 
 # Part Two - PLAGIARISM Alert:
-file = open('day12input.txt',mode='r')
+file = open('./inputs/day12input.txt',mode='r')
 for line in file.read().split("\n"):
     action, value = [line[:1],int(line[1:])]
-    print(f"{action}{value} waypoint = {waypoint}")
     if action in 'SW':
         waypoint[opposite[action]] -= value
     if action in "NE":
@@ -65,8 +64,6 @@ for line in file.read().split("\n"):
     elif action in "R":
         while value:
             waypoint['N'], waypoint['E'] = -waypoint['E'], waypoint['N']
-            print(waypoint)
             value -= 90
 
-    print(coordinates)
 print(abs(coordinates['N']) + abs(coordinates['E']))

@@ -1,4 +1,4 @@
-file = open('day14input.txt',mode='r')
+file = open('./inputs/day14input.txt',mode='r')
 mem = {}
 for line in file.read().split("\n"):
     if "mask" in line:
@@ -24,7 +24,7 @@ print(f"Part One: {sum(mem.values())}")
 
 # Part Two
 mem = {}
-file = open('day14input.txt',mode='r')
+file = open('./inputs/day14input.txt',mode='r')
 for line in file.read().split("\n"):
     if "mask" in line:
         mask = line.split(" = ")[1]
@@ -43,7 +43,7 @@ for line in file.read().split("\n"):
         else: 
             address_helper.append("1")
     
-    print(mask)
+    # print(mask)
 
     first_x = address_helper.index('X') -1
     replaces = ["1","0"]
@@ -58,5 +58,5 @@ for line in file.read().split("\n"):
         address_helper = clean_address.copy()
         
 
-print('\n'.join(mem.keys()))
+# print('\n'.join(mem.keys()))
 print(f"Part Two: {sum(mem.values())}")

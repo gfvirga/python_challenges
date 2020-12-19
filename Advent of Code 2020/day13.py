@@ -1,5 +1,5 @@
 import operator
-file = open('day13input.txt',mode='r')
+file = open('./inputs/day13input.txt',mode='r')
 timestamp, buses = file.read().split("\n")
 timestamp = int(timestamp)
 buses = { int(x) :i for i, x in enumerate(buses.split(",")) if x.isdigit()}

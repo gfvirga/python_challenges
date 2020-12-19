@@ -1,4 +1,4 @@
-file = open('day10input.txt',mode='r')
+file = open('./inputs/day10input.txt',mode='r')
 nums = [int(line) for line in file.read().split("\n")]
 
 diff = {

@@ -1,5 +1,5 @@
 import re
-file = open('day18input.txt',mode='r')
+file = open('./inputs/day18input.txt',mode='r')
 equations = [e for e in file.read().split("\n")]
 
 def calc(s):

@@ -3,7 +3,7 @@ skip = 1
 position = 3
 counter = 0
 projector = 1
-with open('day3input.txt') as f:
+with open('./inputs/day3input.txt') as f:
     for line in f:
         line = list(line.strip())
         if skip < 0:
@@ -37,7 +37,7 @@ result = 1
 for position, skip in [[1,1],[3,1],[5,1],[7,1],[1,2]]:
     position_helper = position
     skip_helper = skip
-    with open('day3input.txt') as f:
+    with open('./inputs/day3input.txt') as f:
         for line in f:
             line = list(line.strip())
             if skip > 0:
