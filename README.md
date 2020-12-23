@@ -2,7 +2,7 @@
 
 This is my journey to Python.
 
-I realize I wasn't born to be a developer, however I love to automate and I enjoy to see my scripts to complete and run successfully. I decided to finally try out Python.
+I am not a full time developer, however I love to automate and I enjoy to see my scripts to complete and run successfully. I decided to finally try out Python.
 
 ## 2020
 In 2020 the weirdest year ever, I had the pleasure to interview with a few of the FAAMNG companies and I realized that I am ahead on the kubernetes and system design game, but very behind on Python. So, I openeed a few books, completed some of the [30 Day of Python ](https://github.com/Asabeneh/30-Days-Of-Python), completed 100 challenges on leetcode, and AOC challenges.
