@@ -22,11 +22,18 @@ print(f"Part One: {sum(x * i for i, x in enumerate(reversed(result[k]), 1))}")
 
 players = deepcopy(original_players)
 def recursive(players):
-
+    seen = set()
     while all(len(v) > 0 for v in players.values()):
         highest = max(players[1][0], players[2][0])
         k = 1 if (highest in players[1]) else 2
         k_o = 1 if k == 2 else 2
+
+        # Learned from sophie https://github.com/sophiebits/adventofcode/blob/main/2020/day22.py#L30
+        kk = (tuple(players[1]), tuple(players[2]))
+        if kk in seen:
+            return 1, players
+        seen.add(kk)
+
         value_helper = {k: players[k][0], k_o: players[k_o][0]}
         for key in players.keys():
             players[key].pop(0)
