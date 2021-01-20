@@ -18,153 +18,178 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-      
+        
     - name: Day 1
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day1.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 2
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day2.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 3
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day3.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 4
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day4.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 5
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day5.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 6
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day6.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 7
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day7.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 8
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day8.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 9
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day9.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 10
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day10.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 11
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day11.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 12
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day12.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 13
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day13.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 14
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day14.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 15
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day15.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 16
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day16.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 17
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day17.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 18
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day18.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 19
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day19.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 20
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day20.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 21
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day21.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 22
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day22.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 23
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day23.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 24
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day24.py
       continue-on-error: true
+      timeout-minutes: 1
 
     - name: Day 25
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day25.py
       continue-on-error: true
+      timeout-minutes: 1
