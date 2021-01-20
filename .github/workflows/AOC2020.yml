@@ -10,17 +10,132 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-    - name: Day one
+    - name: Day 1
       run: |
         cd Advent\ of\ Code\ 2020
         python3 ./day1.py
+    - name: Day 2
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day2.py
+    - name: Day 3
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day3.py
+    - name: Day 4
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day4.py
+        
+    - name: Day 5
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day5.py
+
+    - name: Day 6
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day6.py
+
+    - name: Day 7
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day7.py
+
+    - name: Day 8
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day8.py
+
+    - name: Day 9
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day9.py
+
+    - name: Day 10
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day10.py
+
+    - name: Day 11
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day11.py
+
+    - name: Day 12
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day12.py
+
+    - name: Day 13
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day13.py
+
+    - name: Day 14
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day14.py
+
+    - name: Day 15
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day15.py
+
+    - name: Day 16
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day16.py
+
+    - name: Day 17
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day17.py
+
+    - name: Day 18
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day18.py
+
+    - name: Day 19
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day19.py
+
+    - name: Day 20
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day20.py
+
+    - name: Day 21
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day21.py
+
+    - name: Day 22
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day22.py
+
+    - name: Day 23
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day23.py
+
+    - name: Day 24
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day24.py
+
+    - name: Day 25
+      run: |
+        cd Advent\ of\ Code\ 2020
+        python3 ./day25.py
