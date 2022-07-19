@@ -6,6 +6,6 @@ def remove_dups(nums):
             nums.pop(pointer) # remove element
         else:
             pointer += 1 # increment forward
-    print nums      
+    print(nums)      
 array = [0,0,1,1,1,2,2,3,3,4,4,4,4]
 remove_dups(array)
